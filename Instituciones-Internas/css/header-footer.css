@@ -1,0 +1,738 @@
+html {
+    box-sizing: border-box;
+    font-size: 50%; /** Reset para REMS - 62.5% = 10px de 16px **/
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/** Globales **/
+img {
+    max-width: 100%;
+    
+}
+.contenedor {
+    width: 95%;
+    max-width: 120rem; /** = 1200px; **/
+    margin: 0 auto;
+}
+h1 {
+    font-size: 3.8rem;
+    color: #ffffff;
+}
+h2 {
+    font-size: 3.4rem;
+}
+h3 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 2.0rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.fondo{
+    background-color: #a7a0a4;
+}
+
+/*Estilos para el encabezado
+.header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;left: 0;
+    background-color: #3F3634;
+}
+*/
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container .btn-menu{
+    float: right;
+    line-height:100px;
+}
+.container  .logo{
+    float: left;
+    line-height:100px;
+    display: flex;
+}
+.container .btn-menu label .milabel {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#milabel {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Otros estilos para el encabezado */
+.header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #3F3634;
+    z-index: 1000; 
+}
+
+/* Resto de tus estilos */
+
+
+.logo h1{
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: -3rem;
+    margin-top: 1.0rem;
+    font-family: 'Lato', sans-serif;
+}
+.container .menu{
+    float: right;
+    line-height: 100px;
+}
+.container .menu a{
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+}
+.container .menu a:hover{
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 5px;
+}
+/*Fin de Estilos para el encabezado*/
+
+/*Menú lateral*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.btn-menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+#btn-menu {
+    display: none;
+}
+/**cambios***/
+/* Estilos para el ícono de menú */
+.btn-menu {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+
+/* Estilos para el ícono de menú */
+.menu-icon-index i {
+    position: absolute;
+    top: -28px; 
+    right: 20px; 
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Estilos para el elemento label específico en el índice */
+#milabel {
+    background-color: transparent;
+    color: transparent;
+}
+.menu-icon-index {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    font-size: 18px;
+    color: white; 
+    cursor: pointer;
+    z-index: 1001;
+}
+
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .btn-menu {
+        display: block;
+        margin-right: -40px;
+    }
+
+    .btn-menu i {
+        font-size: 25px;
+    }
+
+    .menu-icon-index {
+        top: 45px; 
+    }
+}
+/** fin cambios***/
+.container-menu {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    width: 70px;
+    height: 100vh;
+    top: 0;
+    left: -70px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+#btn-menu:checked ~ .container-menu {
+    left: 0;
+}
+
+.cont-menu {
+    width: 100%;
+    background: #1c1c1c;
+    height: 100vh;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+
+#btn-menu:checked ~ .container-menu .cont-menu {
+    width: 250px;
+    transform: translateX(0%);
+}
+
+.cont-menu nav {
+    transform: translateY(15%);
+}
+
+.cont-menu nav a {
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+
+.cont-menu nav a:hover {
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+
+/**cambios***/
+.cont-menu label .milabel {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+/* Estilos para el ícono de cierre (X) en el menú lateral */
+.cont-menu label {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    font-size: 24px;
+    color: white; 
+    cursor: pointer;
+    z-index: 1001;
+    background-color: transparent; 
+}
+
+
+/**cambios***/
+
+/*Fin de Menù lateral*/
+
+/** Utilidades **/
+
+.seccion {
+    margin-top: 120px; 
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+.centrar-texto {
+    text-align: center;
+}
+.d-block {
+    display: block!important;
+}
+.contenido-centrado {
+    max-width: 800px;
+}
+
+/** Botones **/
+.boton {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    display: block;
+    flex: 0 0 100%;
+}
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+.boton:hover {
+    cursor: pointer;
+}
+.boton-amarillo {
+    background-color: #d16439;
+}
+.boton-verde {
+    background-color: #71B100;
+}
+.boton-amarillo-inicio {
+    background-color: #ebc001;
+    margin-top: .1rem;
+    padding: .5rem .5rem;
+    border-radius: .5rem;
+}
+.boton-rojo {
+    background-color: #D35400;
+    border-radius: 3rem;
+    padding: 1rem 2rem;
+}
+.button-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+
+/* Header */
+
+/***cambios realizados***/
+
+
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+        
+    }
+    
+}
+@media (max-width: 768px){
+.logo h1 {
+
+font-size: 18px;
+margin-top: 3.0rem;
+margin-bottom: 1.5rem;
+
+        }
+}
+
+@media (max-width: 768px) {
+    .menu {
+      display: none; 
+    }
+    
+    .btn-menu {
+      display: block; 
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+  }
+
+  /**aqui terminan los cambios ***/
+.site-header {
+    background-color: #3F3634;
+    padding: 1rem 0 3rem 0;
+}
+.site-header.inicio {
+       background-image: url(../img/indigenas.jpg);
+       background-position: center center;
+       background-size: cover;
+       height: 100vh;
+       min-height: 60rem;
+   
+}
+.barra .encabezado  {
+    display:flex;
+    align-items:center;
+ 
+}
+.barra .encabezado p {
+    display: flex;
+    font-size: 2.7rem;
+    text-align: center;
+    color: #ffffff;
+    
+}
+
+.encabezado p {
+    display:flex;
+    align-items:center;
+}
+
+.contenido-header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .contenido-header{
+        text-align: left;
+    }
+}
+.contenido-header h1 {
+    color: #ffffff;
+    padding-bottom: 2rem;
+    max-width: 60rem;
+    line-height: 2;
+}
+.barra {
+    padding-top: 2rem;
+    
+    
+}
+
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.barra-login{
+     padding-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .barra-login {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.barra-login a{
+    margin-right:13rem;
+}
+.barra-login .encabezado  {
+    display:flex;
+    align-items:center;
+ 
+}
+.barra-login .encabezado p {
+    display: flex;
+    font-size: 2.7rem;
+    text-align: center;
+    color: #ffffff;
+    
+}
+
+/** Este agregado para el boton de inicio de sesion**/
+
+ #inicio {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 35px;
+    letter-spacing: 4px;
+    background: transparent;
+    border: none;
+
+}
+.login-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    padding: 40px;
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+    margin: 14rem;
+  }
+  
+  
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #E59866;
+    font-size: 12px;
+  }
+  
+  .login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 35px;
+    letter-spacing: 4px
+  }
+  
+  .login-box a:hover {
+    background: #D35400;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #DC7633,
+                0 0 25px #DC7633,
+                0 0 50px #DC7633, 
+                0 0 100px #DC7633;
+  }
+  
+  .login-box a span {
+    position: absolute;
+    display: block;
+  }
+  
+  
+  .login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,  #BA4A00);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #BA4A00);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #BA4A00);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent,  #BA4A00);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+  
+
+/** Navegacion **/
+.navegacion a {
+    color:  #ffffff;
+    text-decoration: none;
+    font-size: 2.2rem;
+    display: block;
+}
+@media (min-width: 768px) {
+    .navegacion a {
+        display: inline-block;
+        font-size: 1.8rem; /** = 18px **/
+        margin-right: 2rem;
+    }
+    .navegacion a:last-of-type {
+        margin: 0;
+    }
+}
+.navegacion a:hover {
+    color: #DC7633;
+}
+
+/** Mobile Menu **/
+.mobile-menu img {
+    width: 3rem;
+}
+@media (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+}
+.navegacion:target {
+    display: block;
+}
+.navegacion {
+    display: none;
+}
+@media (min-width: 768px) {
+    .navegacion {
+        display: block;
+    }
+}
+
+/** Iconos Nosotros **/
+@media (min-width: 768px) {
+    .iconos-nosotros {
+        display: wrap;
+        justify-content: space-between;
+    }
+}
+.icono {
+    text-align: center;
+    padding: 3rem;
+}
+@media (min-width: 768px) {
+    .icono {
+        flex-basis: calc(33.3% - 1rem);
+    }
+}
+.icono h3 {
+    text-transform: uppercase;
+}
+
+
+
+/** Footer **/
+.site-footer {
+    background-color:#3F3634 ;
+    margin: 0;
+}
+.contenedor-footer {
+    padding: 3rem 0;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .contenedor-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.site-footer nav {
+    display: none;
+}
+@media (min-width: 768px) {
+    .site-footer nav {
+        display: block;
+    }
+}
+
+.copyright {
+    margin: 0;
+    color: #ffffff;
+}
+
