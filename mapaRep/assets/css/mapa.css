@@ -1,0 +1,26 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+    background: #3F3634; 
+}
+.mapadiv{
+    width: 75%;
+    margin: auto;
+}
+
+.mapadiv path{
+    fill: #FCFC73;
+    stroke: #191914;
+    stroke-width: 2px;
+}
+
+.mapadiv :hover{
+    fill: #42F105;
+}
+h1 {
+    font-size: 3.5rem;
+}
